@@ -5,8 +5,8 @@ import java.util.Random;
 
 public class Gestion {
 
-	private Sorteo s;
-	
+	private Billete s;
+	 
 	
 	//Metodos
 	
@@ -15,22 +15,25 @@ public class Gestion {
 		
 	}
 	
-	public void comprarDecimo(int i) {
-		
-		if(i>0 && i<100000) {
-			s.setNumero(i);
-		}
-		else {
-			System.out.println("Escoga un numero posible");
-		}
-	}
+	public int comprarDecimo(int decimo, int cantidad) {
 	
-	public int generarSorteo(int i, int hasta, int desde) {
+
+			if(decimo>0 && decimo<100000) {
+				return decimo;
+			}
+			else {
+				System.out.println("Escoga un numero posible");
+				return -1;
+			}
+	}
+			
+	
+	public void generarSorteo(int i, int hasta, int desde) {
 		
 		Random random=new Random(System.nanoTime());
 		i=random.nextInt(hasta-desde+1)+desde;
 		
-		return i;
+		s.setNumero(i);
 		
 	}
 	

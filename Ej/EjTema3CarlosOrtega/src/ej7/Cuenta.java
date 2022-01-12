@@ -2,7 +2,6 @@ package ej7;
 
 public class Cuenta {
 
-	private Cuenta c;
 	
 	private int id;
 	private String nombre;
@@ -16,14 +15,6 @@ public class Cuenta {
 	}
 
 
-	public Cuenta getC() {
-		return c;
-	}
-
-
-	public void setC(Cuenta c) {
-		this.c = c;
-	}
 
 
 	public int getId() {
@@ -58,34 +49,14 @@ public class Cuenta {
 
 	@Override
 	public String toString() {
-		return "Cuenta [c=" + c + ", id=" + id + ", nombre=" + nombre + ", saldo=" + saldo + "]";
+		return "Cuenta [ id=" + id + ", nombre=" + nombre + ", saldo=" + saldo + "]";
 	}
 	
 	
 	
 	//Metodos
 	
-	public void ingresarDinero(double i) {
-		if(i>0) {
-			c.setSaldo(c.getSaldo()+i);
-		}
-		else {
-			System.out.println("Debdes ingresar mas de 0€");
-		}
-	}
-	
-	public void retirarDinero(double i){
-		if(i<c.getSaldo()) {
-			c.setSaldo(c.getSaldo()-i);
-		}
-		else {
-			System.out.println("No tienes ese dinero para retirar");
-		}
-	}
-	
-	public double verSaldo() {
-		return c.getSaldo();
-	}
+
 	
 	
 }
