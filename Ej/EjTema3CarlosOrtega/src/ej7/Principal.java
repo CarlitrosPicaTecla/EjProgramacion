@@ -7,7 +7,7 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int num;
+		int num=0;
 		double saldo;
 		int id;
 		String nombre;
@@ -26,7 +26,7 @@ public class Principal {
 			System.out.println("2.Retirar");
 			System.out.println("3.Ver saldo");
 			
-		}while(num!0);
+		}while(num!=0);
 
 	}
 
