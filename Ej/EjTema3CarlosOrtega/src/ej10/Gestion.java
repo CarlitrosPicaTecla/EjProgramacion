@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public class Gestion {
 
-	Nota a[];
+	private Nota a[];
 	
 	public Gestion() {
 		
@@ -12,55 +12,60 @@ public class Gestion {
 	
 	//METODOS
 	
+	
 	public void nNotas(int nNotas) {
 		
 		a=new Nota[nNotas];
 	}
 	
-	public void addNotas(Nota nota) {
-		
-		for (int i = 0; i < a.length; i++) {
+	public Nota[] getA() {
+		return a;
+	}
+
+	public void setA(Nota[] a) {
+		this.a = a;
+	}
+
+	public void addNotas(Nota nota, int i) {
 				
 			a[i]=nota;
-		}
+		
 	}
 	
 	public void updateNota(int pos, Nota nota) {
 		a[pos]=nota;
 	}
 	
-	//public double doAverage(Nota a[]) {
-		//double media;
-		//double suma;
+	public double doAverage(Gestion g) {
+		double media=0;
+		double suma=0;
 		
-		//for (int i = 0; i < a.length; i++) {
+		for (int i = 0; i < a.length; i++) {
 			
-			//suma=suma+a[i];//
-			//media=suma/a.length;
-		//}
-		//return media;
+			suma=suma+g.getA()[i].getNotas();
+			media=suma/a.length;
+		}
+		return media;
 		
 		
-	//}
+	}
 	
-	//public int nSuspensos(Nota a[]) {
-		//int n=0;
-		//for (int i = 0; i < a.length; ) {
-			//if(a[i]<5) {
-			//	n++;
-			//	i++;
-			//}
-		//	else {
+	public int nSuspensos(Gestion g) {
+		int nSuspensos=0;
+		for (int i = 0; i < a.length;i++ ) {
+		if(g.getA()[i].getNotas()<5) {
+				nSuspensos++;
 				
-			//}
-			//return n;
-		//}
-	//}
+			}
+		}
+		return nSuspensos;
+	}
 	
 	public void showNotas(Gestion g) {
-		for (int i = 0; i < a.length; i++) {
-			System.out.println(this.a[i]+"| ");
+		for (int i = 0; i < g.getA().length; i++) {
+			System.out.print(g.getA()[i].getNotas()+"| ");
 		}
+		System.out.println();
 	}
 	
 	

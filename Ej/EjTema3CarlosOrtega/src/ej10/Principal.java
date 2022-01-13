@@ -13,12 +13,17 @@ public class Principal {
 		int nNotas = 0;
 		int pos=0;
 		double nota=0;
+		int cont=0;
+		double media=0;
+		int suspensos=0;
 		
 		do {
 			System.out.println("1.Elegir numero de notas");
 			System.out.println("2.Añadir Notas");
 			System.out.println("3.Actualizar nota");
 			System.out.println("4.Mostrar notas");
+			System.out.println("5.Calcular media de notas");
+			System.out.println("6.Ver numero de suspensos");
 			System.out.println("0.Salir");
 			num=Leer.datoInt();
 			
@@ -32,17 +37,26 @@ public class Principal {
 				break;
 			case 2:
 				
-				for (int i = 0; i < nNotas; i++) {
+				for (int i = 0; i < nNotas; ) {
 				System.out.println("Introduzca la nota ");
 				nota=Leer.datoDouble();
-				g.addNotas(new Nota(nota));
+				g.addNotas(new Nota(nota),i);
+				i++;
 				}
 				break;			
 			case 3:
 				g.updateNota(pos, n);
 				break;
 			case 4:
-				g.showNotas();
+				g.showNotas(g);
+				break;
+			case 5:
+				media=g.doAverage(g);
+				System.out.println("La media de las notas es: "+media);
+				break;
+			case 6:
+				suspensos=g.nSuspensos(g);
+				System.out.println("El numero de suspensos es de: "+suspensos);
 				break;
 			default:
 				break;
