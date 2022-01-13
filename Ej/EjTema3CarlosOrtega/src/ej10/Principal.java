@@ -16,6 +16,7 @@ public class Principal {
 		int cont=0;
 		double media=0;
 		int suspensos=0;
+		double numNuevo=0;
 		
 		do {
 			System.out.println("1.Elegir numero de notas");
@@ -45,7 +46,12 @@ public class Principal {
 				}
 				break;			
 			case 3:
-				g.updateNota(pos, n);
+				System.out.println("¿Que posicion quiere cambiar?");
+				pos=Leer.datoInt();
+				System.out.println("Escribe la nueva nota: ");
+				numNuevo=Leer.datoDouble();
+				g.updateNota(pos, new Nota(numNuevo));
+				System.out.println("El numero se ha cambiado correctamente");
 				break;
 			case 4:
 				g.showNotas(g);
