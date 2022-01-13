@@ -1,6 +1,5 @@
 package ej10;
 
-import java.util.Iterator;
 
 public class Gestion {
 
@@ -13,10 +12,7 @@ public class Gestion {
 	//METODOS
 	
 	
-	public void nNotas(int nNotas) {
-		
-		a=new Nota[nNotas];
-	}
+
 	
 	public Nota[] getA() {
 		return a;
@@ -24,6 +20,11 @@ public class Gestion {
 
 	public void setA(Nota[] a) {
 		this.a = a;
+	}
+	
+	public void nNotas(int nNotas) {
+		
+		a=new Nota[nNotas];
 	}
 
 	public void addNotas(Nota nota, int i) {

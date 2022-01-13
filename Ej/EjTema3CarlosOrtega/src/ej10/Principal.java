@@ -64,7 +64,11 @@ public class Principal {
 				suspensos=g.nSuspensos(g);
 				System.out.println("El numero de suspensos es de: "+suspensos);
 				break;
+			case 0:
+				System.out.println("Hasta la proxima!");
+				break;
 			default:
+				
 				break;
 			}
 			
