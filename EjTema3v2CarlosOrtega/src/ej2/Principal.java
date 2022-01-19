@@ -75,10 +75,22 @@ public class Principal {
 				
 				break;
 			case 3:
-				System.out.println("");
+				int c=0;
+				int numop3=0;
+				System.out.println("Introduce numero de habitacion para cambiar estado de limpiza");
+				c=Leer.datoInt();
+				c--;
+				System.out.println("1.Limpia 2.Sucia");
+				h.cambiarLimpieza(c, h, numop3);
 				break;
 			case 4:
-				
+				int b=0;
+				int numop4=0;
+				System.out.println("Introduce numero de habitacion para cambiar estado de ocupacion");
+				b=Leer.datoInt();
+				b--;
+				System.out.println("1.Ocupada 2.Vacia");
+				h.cambiarOcupado(b, h, numop4);
 				break;
 			case 5:
 				int f=0;
@@ -88,7 +100,13 @@ public class Principal {
 				h.mostarDatos(h, f);
 				break;
 			case 6:
-				
+				int k=0;
+				System.out.println("Introduce numero de habitacion para calcular precio final");
+				double precioFinal=0;
+				k=Leer.datoInt();
+				k--;
+				precioFinal=h.precioFinal(h, k);
+				System.out.println("Precio final: "+precioFinal+"€");
 				break;
 			default:
 				break;

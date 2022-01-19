@@ -91,14 +91,14 @@ public class Hotel {
 	}
 	
 	public void imprimirTipo(int i, Hotel h) {
-		if(h.habitaciones[i].getServicioExtra()==1) {
+		if(h.habitaciones[i].getTipo()==1) {
 			System.out.println("Grande");
 		}
-		else if(h.habitaciones[i].getServicioExtra()==2) {
+		else if(h.habitaciones[i].getTipo()==2) {
 			System.out.println("Mediana");
 
 		}
-		else if(h.habitaciones[i].getServicioExtra()==3) {
+		else if(h.habitaciones[i].getTipo()==3) {
 			System.out.println("Pequeña");
 
 		}
@@ -116,7 +116,6 @@ public class Hotel {
 	public void mostarDatos(Hotel h, int i) {
 		System.out.println("Cliente: "+h.getHabitaciones()[i].getCliente());
 		System.out.print("Tipo habitacion: ");imprimirTipo(i,h);
-		System.out.println();
 		System.out.println("Precio al dia: "+h.getHabitaciones()[i].getPrecio()+"€");
 		System.out.println("Numero de dias: "+h.getHabitaciones()[i].getnDias()+" dias");
 		System.out.print("Estado limpieza: ");imprimirLimpieza(i);
