@@ -65,7 +65,7 @@ public class Hotel {
 	}
 	
 	public boolean comprobarLimpieza(int i) {
-		return habitaciones[i-1].isLimpio();
+		return habitaciones[i].isLimpio();
 	}
 	
 	public void imprimirLimpieza(int i) {
@@ -74,6 +74,33 @@ public class Hotel {
 		}
 		else {
 			System.out.print("Sucia");
+		}
+	}
+	
+	public boolean comprobarOcupacion(int i) {
+		return habitaciones[i].isOcupada();
+	}
+	
+	public void imprimirOcupacion(int i) {
+		if(comprobarOcupacion(i)) {
+			System.out.print("Ocupada");
+		}
+		else {
+			System.out.print("Vacia");
+		}
+	}
+	
+	public void imprimirTipo(int i, Hotel h) {
+		if(h.habitaciones[i].getServicioExtra()==1) {
+			System.out.println("Grande");
+		}
+		else if(h.habitaciones[i].getServicioExtra()==2) {
+			System.out.println("Mediana");
+
+		}
+		else if(h.habitaciones[i].getServicioExtra()==3) {
+			System.out.println("Pequeña");
+
 		}
 	}
 	
@@ -88,10 +115,15 @@ public class Hotel {
 
 	public void mostarDatos(Hotel h, int i) {
 		System.out.println("Cliente: "+h.getHabitaciones()[i].getCliente());
-		System.out.println("Tipo habitacion: "+h.getHabitaciones()[i].getTipo());
-		System.out.println("Precio al dia: "+h.getHabitaciones()[i].getPrecio());
-		System.out.println("Numero de dias: "+h.getHabitaciones()[i].getnDias());
+		System.out.print("Tipo habitacion: ");imprimirTipo(i,h);
+		System.out.println();
+		System.out.println("Precio al dia: "+h.getHabitaciones()[i].getPrecio()+"€");
+		System.out.println("Numero de dias: "+h.getHabitaciones()[i].getnDias()+" dias");
 		System.out.print("Estado limpieza: ");imprimirLimpieza(i);
+		System.out.println();
+		System.out.print("Ocupacion: ");imprimirOcupacion(i);
+		System.out.println();
+		System.out.println();
 	}
 	
 	
