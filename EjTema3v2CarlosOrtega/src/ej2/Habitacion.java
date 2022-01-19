@@ -2,20 +2,24 @@ package ej2;
 
 public class Habitacion {
 
-	private int tipo;
+	private int tipo;//1.Grande, 2.Mediana 3.Pequeña
 	private double precio;
 	private int servicioExtra;
 	private String Cliente;
 	private int nDias;
+	private boolean limpio;
+	private boolean ocupada;
 	
 	
-	public Habitacion(int tipo, double precio, int servicioExtra, String cliente, int nDias) {
+	public Habitacion(int tipo, double precio, int servicioExtra, String cliente, int nDias, boolean limpio, boolean ocupada) {
 		super();
 		this.tipo = tipo;
 		this.precio = precio;
 		this.servicioExtra = servicioExtra;
 		Cliente = cliente;
 		this.nDias = nDias;
+		this.limpio= limpio;
+		this.ocupada=ocupada;
 	}
 
 
@@ -67,6 +71,27 @@ public class Habitacion {
 	public void setnDias(int nDias) {
 		this.nDias = nDias;
 	}
+
+
+	public boolean isLimpio() {
+		return limpio;
+	}
+
+
+	public void setLimpio(boolean limpio) {
+		this.limpio = limpio;
+	}
+
+
+	public boolean isOcupada() {
+		return ocupada;
+	}
+
+
+	public void setOcupada(boolean ocupada) {
+		this.ocupada = ocupada;
+	}
+	
 	
 	
 }
