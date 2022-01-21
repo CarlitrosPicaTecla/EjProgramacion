@@ -35,15 +35,18 @@ public class Principal {
 			precio=Leer.datoDouble();
 			movil= new Movil(marca,modelo,precio,false);			
 			int i=0;
-			v.addMovil(movil, numMenu);
+			v.addMovil(movil, i);
+			i++;
 			break;
 		case 2:
 			
 			break;
 		case 3:
 		
-			int j=0;
+			for (int j = 0; j < moviles.length; j++) {
 				v.mostarListaMovil(j, v);
+			}
+
 			
 
 			break;
