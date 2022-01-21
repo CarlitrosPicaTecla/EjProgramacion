@@ -60,12 +60,14 @@ public class Principal {
 				System.out.println("Introduce DNI para eliminar un usuario");
 				dniBorrar=Leer.dato();
 				
-				for (int j = 0; j < 1; j++) {
+				for (int j = 0; j <= 1;) {
 					if(g.clientes[j].getDni().equals(dniBorrar)) {
 						g.removeCliente(j);
+						j++;
 					}
 					else {
 						System.out.println("Cliente no existente");
+						System.out.println();
 					}
 
 				}
@@ -74,18 +76,17 @@ public class Principal {
 				int tope=0;
 				String dniBusca;
 				System.out.println("Introduce DNI para imprimir cliente");
-				dniBusca=Leer.dato();
 				
-					for (int j = 0; j < 1; j++) {
-						
+					for (int j = 0; j <= 1;) {
+						dniBusca=Leer.dato();
+
 						if(g.clientes[j].getDni().equals(dniBusca)) {
 							g.imprimirCliente(g, j);
+							j++;
 						}
 						else {
 							System.out.println("Cliente no existente");
 						}
-						
-
 				}
 				break;
 			case 4:
