@@ -7,10 +7,7 @@ public class Movil {
 	private double precio;
 	private boolean vendido;
 	
-	public Movil() {
 
-	}
-	
 	public Movil(String marca, String modelo, double precio, boolean vendido) {
 		super();
 		this.marca = marca;
