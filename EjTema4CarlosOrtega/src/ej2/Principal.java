@@ -10,6 +10,8 @@ public class Principal {
 		Carta c;
 		
 		
+		
+		
 	}
 
 }
