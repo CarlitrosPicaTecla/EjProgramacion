@@ -8,6 +8,15 @@ public class Principal {
 		// TODO Auto-generated method stub
 		
 		
+		
+		
+		/*Vehiculo vPrueba= new Vehiculo("Toyota","Corolla",2000, 110, 2);
+		Turismo tPrueba= new Turismo("Seat", "Ibiza",1900, 105,2);
+		Motocicleta mPrueba= new Motocicleta("KTM","Duke R", 890, 120, 1);
+		Furgoneta fPrueba= new Furgoneta("Man","TGE",2000, 110,2);
+		
+		fPrueba.calcularImpuesto(100);*/
+		
 		Vehiculo lista[]=new Vehiculo[3];
 		Vehiculo v;
 		Dgt d= new Dgt(lista);
@@ -84,7 +93,7 @@ public class Principal {
 				num=Leer.datoInt();
 				num--;
 				total=lista[num].calcularImpuesto(base);
-				System.out.println("Impuesto: "+total);
+				System.out.println("Impuesto: "+total+"€");
 				break;
 			case 5:
 				for (int i = 0; i < lista.length; i++) {

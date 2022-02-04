@@ -7,12 +7,9 @@ public class Furgoneta extends Vehiculo {
 		// TODO Auto-generated constructor stub
 	}
 
-	public double calcularImpuesto(double cantidadFija) {
-		double total;
-		double porc=60;
-		porc=porc/100;
-		total=cantidadFija;
+	public double calcularImpuesto(double porc) {
 		
-		return total;
+		return super.calcularImpuesto(porc)+porc;
+
 	}
 }

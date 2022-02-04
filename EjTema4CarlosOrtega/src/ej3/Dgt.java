@@ -46,4 +46,16 @@ public class Dgt {
 		System.out.println("Combustible: "+comprobrarCombustible(i));
 		System.out.println();
 	}
+	public double calcularUno(Vehiculo v, double cant) {
+		return v.calcularImpuesto(cant);
+	}
+	public double calcularTotal(double cant) {
+		double total=0;
+		for (int i = 0; i < vehiculos.length; i++) {
+			total+=calcularUno(vehiculos[i], cant);
+			total+=vehiculos[i].calcularImpuesto(i);
+		}
+		
+		return total;
+	}
 }

@@ -8,13 +8,9 @@ public class Turismo extends Vehiculo {
 	}
 
 	@Override
-	public double calcularImpuesto(double cantidadFija) {
-		double total;
-		double porc=25;
-		porc=porc/100;
-		total=(getCilindrada()*porc)+cantidadFija;
-		
-		return total;
+	public double calcularImpuesto(double porc) {
+		double div=100;
+		return super.calcularImpuesto(porc)+getCilindrada()*porc/div;
 	}
 
 

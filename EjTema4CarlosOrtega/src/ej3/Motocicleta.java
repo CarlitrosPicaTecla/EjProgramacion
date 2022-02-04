@@ -8,12 +8,10 @@ public class Motocicleta extends Vehiculo {
 	}
 
 	@Override
-	public double calcularImpuesto(double cantidadFija) {
-		double total;
-		double porc=60;
-		porc=porc/100;
-		total=(getCv()*porc)+cantidadFija;
+	public double calcularImpuesto(double porc) {
+
+		double div=100;
 		
-		return total;
+		return	super.calcularImpuesto(porc)+getCv()*porc/div;
 	}
 }

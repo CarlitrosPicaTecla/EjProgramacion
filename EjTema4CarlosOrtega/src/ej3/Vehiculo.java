@@ -1,6 +1,6 @@
 package ej3;
 
-public abstract class Vehiculo {
+public class Vehiculo {
 
 	private String marca;
 	private String modelo;
@@ -60,7 +60,9 @@ public abstract class Vehiculo {
 	}
 
 	
-	public abstract double calcularImpuesto(double cantidadFija);
+	public double calcularImpuesto(double porc) {
+		return 2*cv+cilindrada;
+	}
 		
 
 	
