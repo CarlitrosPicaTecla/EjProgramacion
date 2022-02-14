@@ -1,6 +1,6 @@
 package ej5;
 
-public class Empleado {
+public abstract class Empleado {
 
 	private String nombre;
 	private int id;
@@ -55,7 +55,9 @@ public class Empleado {
 	public void setRecaudado(double recaudado) {
 		this.recaudado = recaudado;
 	}
+	//METODOS
 	
+	public abstract double calcularSueldo(double porcentaje);
 	
 	
 }
