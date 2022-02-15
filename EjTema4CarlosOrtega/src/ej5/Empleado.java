@@ -1,4 +1,4 @@
-package ej5;
+ package ej5;
 
 public abstract class Empleado {
 
