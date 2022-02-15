@@ -1,6 +1,6 @@
 package ej5;
 
-public abstract class Empleado {
+public class Empleado {
 
 	private String nombre;
 	private int id;
@@ -57,7 +57,9 @@ public abstract class Empleado {
 	}
 	//METODOS
 	
-	public abstract double calcularSueldo(double porcentaje);
+	public  double calcularSueldo(double porcentaje) {
+		return 0;
+	}
 	
 	
 }
