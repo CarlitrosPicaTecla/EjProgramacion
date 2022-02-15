@@ -45,7 +45,7 @@ public class Gestion {
 		System.out.println("Cliente: "+listaH[i].getCliente());
 		System.out.println("Nº de dias: "+listaH[i].getnDias());
 		System.out.println("Nº Ocupantes: "+listaH[i].getOcupantes());
-		System.out.println("Precio: "+listaH[i].getPrecioB());
+		System.out.println("Precio: "+listaH[i].getPrecioB()+"€");
 		System.out.println();
 
 	}
