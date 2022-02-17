@@ -28,7 +28,11 @@ public class Alimentacion extends Producto {
 
 
 	public double calcularPrecioFinal(double descuento) {
-		return 0;
+		if(diasCaducidad<=2) {
+			return getPrecioU()-(getPrecioU()*descuento/100);
+		}
+		return getPrecioU();
+		
 	}
 	
 	

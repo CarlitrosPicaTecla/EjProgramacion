@@ -34,8 +34,8 @@ public class Gestion {
 		return h.calcularPrecio(porc);
 	}
 	
-	public void gananciaTotal(double descuento) {
-		for (int i = 0; i < listaH.length; i++) {
+	public void gananciaTotal(double descuento, int tam) {
+		for (int i = 0; i < tam; i++) {
 			totalRecaudado=totalRecaudado+ calcularHabitacion(listaH[i], descuento);
 		}
 	}

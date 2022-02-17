@@ -1,6 +1,6 @@
 package ej1;
 
-public class Suite extends Habitacion{
+public class Suite extends Habitacion implements IBotella{
 
 	
 	private double metrosCuadrados;
@@ -44,6 +44,13 @@ public class Suite extends Habitacion{
 	public String toString() {
 		super.toString();
 		return "Suite [metrosCuadrados=" + metrosCuadrados + ", consumido=" + consumido + "]";
+	}
+
+
+	@Override
+	public void mostrarBotella() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	

@@ -27,6 +27,9 @@ public class LineaVenta {
 		this.cantidad = cantidad;
 	}
 	
-	
+
+	public double calcularXCantidad() {
+		return p.getPrecioU()*cantidad;
+	}
 	
 }

@@ -14,7 +14,7 @@ public class Principal {
 		Habitacion listaH[]=new Habitacion[tam];
 		listaH[0]=new Habitacion("Xopin",20, true, 5, 1);
 		listaH[1]=new Suite("Maylor",30, true, 5, 1, 80, 100);
-		listaH[2]=new Apartamento("Carlos",10, true, 10, 1, 80);
+		listaH[2]=new Apartamento("Carlos",10, false, 10, 1, 80);
 		listaH[3]=new Apartamento("Paco",12, false, 5, 1, 50);
 
 		
@@ -40,7 +40,7 @@ public class Principal {
 			case 2:
 				i=0;
 
-				g.gananciaTotal(porc);
+				g.gananciaTotal(porc,tam);
 				System.out.println(g.getTotalRecaudado());
 				
 				break;

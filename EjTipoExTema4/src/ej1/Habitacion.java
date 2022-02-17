@@ -10,7 +10,6 @@ public class Habitacion {
 	
 	
 	public Habitacion(String cliente, double precioB, boolean ocupado, int nDias, int ocupantes) {
-		super();
 		this.cliente = cliente;
 		this.precioB = precioB;
 		this.ocupado = ocupado;
