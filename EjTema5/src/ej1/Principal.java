@@ -11,6 +11,11 @@ public class Principal {
 		List <Nota>Notas= new ArrayList<Nota>();
 		
 		Agenda a = new Agenda(1, Notas);
+		a.addNota(new Nota(0, "Lista compra", "Huevos, azucar, pan", true));
+		
+		
+		
+		a.mostrarNota(0);
 		
 	}
 

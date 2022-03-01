@@ -12,7 +12,7 @@ public class Principal {
 		//Le doy valor al porcentaje desde el principio para no volver a introducirlo
 		Avion[] aviones=new Avion[tam];
 		
-		aviones[0]=new Avion(1, 5, 2010, 1500);
+		aviones[0]=new Avion(1, 10, 2010, 1500);
 		aviones[1]=new Caza(2, 10, 2015, 1000, 500, 12);
 		aviones[2]=new NaveEspacial(3, 12, 1999, 3000, 5);
 		
