@@ -51,11 +51,12 @@ public class Avion implements IAterrizar{
 	public double calcularPrecioAterrizaje(double descuento) {
 		double dos=2;
 		double dosmil=2000;
+		double cien=100;
 		if(lCombustible>dosmil) {
-			return dos*longitud+100;
+			return dos*longitud+cien;
 		}
 		
-		return dos*longitud ;
+			return dos*longitud ;
 	}
 	
  
