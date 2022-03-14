@@ -18,9 +18,9 @@ public class Principal {
 		
 		Gestion g = new Gestion(l);
 		
-		g.cursoNulo(l.get(1));
+		g.cursoNulo(l.get(2));
 		
-		System.out.println(l);
+		g.mostrarLista();
 	}
 
 }

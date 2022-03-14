@@ -25,6 +25,17 @@ public class Gestion {
 
 	}
 	
+	public void mostrarLista() {
+
+	for (int i = 0; i <l.size(); i++) {
+		System.out.println("Nombre: "+l.get(i).getNombre());
+		System.out.println("Curso: "+l.get(i).getCurso());
+		System.out.println();
+
+	}
+		
+	}
+	
 	
 
 }

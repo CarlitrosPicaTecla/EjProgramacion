@@ -29,7 +29,7 @@ public class Persona {
 
 	@Override
 	public String toString() {
-		return "Persona [nombre=" + nombre + ", curso=" + curso + "]";
+		return "Nombre: " + nombre + " Curso: " + curso;
 	}
 
 	
