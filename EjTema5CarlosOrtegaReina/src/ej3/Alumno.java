@@ -1,14 +1,17 @@
 package ej3;
 
+
+
 public class Alumno {
 
 	private String dni;
 	private String nombre;
+	private int nota;
 	
-	public Alumno(String dni, String nombre) {
-		super();
+	public Alumno(String dni, String nombre, int nota) {
 		this.dni = dni;
 		this.nombre = nombre;
+		this.nota = nota;
 	}
 
 	public String getDni() {
@@ -27,10 +30,23 @@ public class Alumno {
 		this.nombre = nombre;
 	}
 
+	public int getNota() {
+		return nota;
+	}
+
+	public void setNota(int nota) {
+		this.nota = nota;
+	}
+
 	@Override
 	public String toString() {
-		return "Alumno [dni=" + dni + ", nombre=" + nombre + "]";
+		return "Alumno [dni=" + dni + ", nombre=" + nombre + ", nota=" + nota + "]";
 	}
+	
+
+	
+
+	
 	
 	
 }
