@@ -1,22 +1,21 @@
 package ej4;
 
-import java.util.HashMap;
 import java.util.Iterator;
-
+import java.util.Map;
 public class Agenda {
 
-	HashMap<Contacto, String> contactos;
+	private Map<Contacto, String> contactos;
 
-	public Agenda(HashMap<Contacto, String> contactos) {
+	public Agenda(Map<Contacto, String> contactos) {
 		super();
 		this.contactos = contactos;
 	}
 
-	public HashMap<Contacto, String> getContactos() {
+	public Map<Contacto, String> getContactos() {
 		return contactos;
 	}
 
-	public void setContactos(HashMap<Contacto, String> contactos) {
+	public void setContactos(Map<Contacto, String> contactos) {
 		this.contactos = contactos;
 	}
 	
@@ -34,8 +33,8 @@ public class Agenda {
 		return null;
 	}
 	
-	public void anyadirContacto(Contacto c) {
-		contactos.keySet().add(c);
+	public void anyadirContacto(Contacto c, String tlf) {
+		contactos.put(c, tlf);
 	}
 	
 	public void borrarContacto(String nombre) {
@@ -50,6 +49,17 @@ public class Agenda {
 		
 		buscarContacto(nombre).setNombre(nombre);
 	}
+	
+	public void mostrarAgenda() {
+		Iterator<Contacto> it= contactos.keySet().iterator();
+		while(it.hasNext()) {
+			System.out.println();
+			System.out.println(it.next().getNombre());
+			System.out.println(contactos.get(it));
+			System.out.println();
+		}
+	}
+	
 	
 	
 }
