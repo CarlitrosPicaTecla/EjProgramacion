@@ -3,12 +3,12 @@ package ej4;
 public class Contacto {
 
 	private String nombre;
-	private String tlf;
+
 	
-	public Contacto(String nombre, String tlf) {
+	public Contacto(String nombre) {
 		super();
 		this.nombre = nombre;
-		this.tlf = tlf;
+
 	}
 
 	public String getNombre() {
@@ -19,18 +19,14 @@ public class Contacto {
 		this.nombre = nombre;
 	}
 
-	public String getTlf() {
-		return tlf;
-	}
-
-	public void setTlf(String tlf) {
-		this.tlf = tlf;
-	}
-
 	@Override
 	public String toString() {
-		return "Contacto [nombre=" + nombre + ", tlf=" + tlf + "]";
+		return "Contacto [nombre=" + nombre + "]";
 	}
+
+
+
+
 	
 
 	

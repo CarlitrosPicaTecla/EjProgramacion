@@ -40,15 +40,15 @@ public class Agenda {
 	
 	public void borrarContacto(String nombre) {
 		
-		if(buscarContacto(nombre).getNombre().equalsIgnoreCase(nombre)) {
-
 			contactos.remove(buscarContacto(nombre));
-		}
+		
+		
 		
 	}
 	
-	public void modificarContacto() {
+	public void modificarContacto(String nombre) {
 		
+		buscarContacto(nombre).setNombre(nombre);
 	}
 	
 	
