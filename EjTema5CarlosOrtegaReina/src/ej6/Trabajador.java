@@ -74,7 +74,7 @@ public class Trabajador implements Comparable<Trabajador> {
 		return "Trabajador [nombre=" + nombre + ", dni=" + dni + ", horasT=" + horasT + ", sueldo=" + sueldo + "]";
 	}
 	
-	public double calcularSueldo(double horasT, double sueldoH) {
+	public double calcularSueldo(double sueldoH) {
 		
 		
 		setSueldo(horasT*sueldoH);
@@ -86,6 +86,16 @@ public class Trabajador implements Comparable<Trabajador> {
 	@Override
 	public int compareTo(Trabajador o) {
 		// TODO Auto-generated method stub
+		
+		if(this.horasT>=o.getHorasT()) {
+			return -1;
+		}
+		else {
+			if(this.horasT<=o.getHorasT()) {
+				return 1;
+			}
+		}
+		
 		return 0;
 	}
 	

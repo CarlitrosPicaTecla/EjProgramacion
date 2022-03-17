@@ -22,4 +22,18 @@ public class CrudTrabajador {
 	public void anyadirTrabajador(Trabajador t) {
 		trabajadores.add(t);
 	}
+	
+	public void mostrarLista() {
+		System.out.println("DNI	      NOMBRE	     HORAS	     SUELDO");
+		for (int i = 0; i < trabajadores.size(); i++) {
+			
+			
+			System.out.print(trabajadores.get(i).getDni()+"     ");
+			System.out.print(trabajadores.get(i).getNombre()+"       ");
+			System.out.print(trabajadores.get(i).getHorasT()+"         ");
+			System.out.println(trabajadores.get(i).calcularSueldo(trabajadores.get(i).getHorasT())+"   ");
+			
+			
+		}
+	}
 }
