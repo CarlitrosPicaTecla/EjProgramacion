@@ -23,7 +23,7 @@ public class CrudTrabajador {
 		trabajadores.add(t);
 	}
 	
-	public void mostrarLista() {
+	public void mostrarLista(double sueldoH) {
 		System.out.println("DNI	      NOMBRE	     HORAS	     SUELDO");
 		for (int i = 0; i < trabajadores.size(); i++) {
 			
@@ -31,7 +31,7 @@ public class CrudTrabajador {
 			System.out.print(trabajadores.get(i).getDni()+"     ");
 			System.out.print(trabajadores.get(i).getNombre()+"       ");
 			System.out.print(trabajadores.get(i).getHorasT()+"         ");
-			System.out.println(trabajadores.get(i).calcularSueldo(trabajadores.get(i).getHorasT())+"   ");
+			System.out.println(trabajadores.get(i).calcularSueldo(sueldoH)+"   ");
 			
 			
 		}

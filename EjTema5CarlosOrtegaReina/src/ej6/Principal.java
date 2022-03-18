@@ -24,14 +24,14 @@ public class Principal {
 		ct.anyadirTrabajador(t= new Trabajador("Paco","753357456",150));
 		ct.anyadirTrabajador(t= new Trabajador("Antoñito","95115874",100));
 
-		ct.mostrarLista();
+		ct.mostrarLista(12);
 		System.out.println();
 		Collections.sort(trabajadores);
-		ct.mostrarLista();
+		ct.mostrarLista(12);
 		System.out.println();
 		
 		Collections.sort(trabajadores, new CompararSueldo());
-		ct.mostrarLista();
+		ct.mostrarLista(12);
 	
 	}
 
