@@ -10,6 +10,7 @@ public class Alumno {
 	private String curso;
 	private String email;
 	public double notaMedia;
+	
 	public Alumno(String dni, String nombre, String curso, String email, double notaMedia) {
 		super();
 		this.dni = dni;
@@ -18,6 +19,7 @@ public class Alumno {
 		this.email = email;
 		this.notaMedia = notaMedia;
 	}
+	
 	public Optional<String> getDni() {
 		return Optional.ofNullable(dni);
 	}

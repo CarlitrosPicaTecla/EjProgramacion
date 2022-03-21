@@ -44,12 +44,13 @@ public class CrudAlumno {
 	
 	public void mostrarAlumnos() {
 		for (int i = 0; i < alumnos.size(); i++) {
+			System.out.println();
 			System.out.println("DNI: "+alumnos.get(i).getDni());
 			System.out.println("Nombre: "+alumnos.get(i).getNombre());
 			System.out.println("Curso: "+alumnos.get(i).getCurso());
-			System.out.println("E-Mail"+alumnos.get(i).getEmail());
+			System.out.println("E-Mail: "+alumnos.get(i).getEmail());
 			System.out.println("Media: "+alumnos.get(i).getNotaMedia());
-
+			System.out.println();
 
 		}
 	}

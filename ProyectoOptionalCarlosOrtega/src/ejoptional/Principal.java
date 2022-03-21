@@ -21,6 +21,7 @@ public class Principal {
 		
 		ca.comprobarTodosNulos();
 		ca.mostrarAlumnos();
+		
 	}
 
 }
