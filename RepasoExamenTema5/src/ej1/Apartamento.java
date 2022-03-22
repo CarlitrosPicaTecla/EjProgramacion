@@ -20,4 +20,8 @@ public class Apartamento extends Habitacion{
 	public double calcularPrecio(double descuento) {
 		return super.calcularPrecio(descuento)+extra;
 	}
+
+
+	
+	
 }

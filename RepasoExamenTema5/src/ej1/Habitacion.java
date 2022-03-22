@@ -99,16 +99,14 @@ public class Habitacion implements Comparable<Habitacion> {
 		}
 		return 0;
 	}
-	
-	public void mostrarHabitacion(double descuento) {
-		System.out.println();
-		System.out.println("Cliente: "+cliente);
-		System.out.println("Ocupacion: "+ocupacion);
-		System.out.println("Nº dias: "+nDias);
-		System.out.println("Nº ocupantes: "+nOcupantes);
-		System.out.println("Precio: "+calcularPrecio(descuento)+"€");
-		System.out.println();
-		
-	}
 
+	@Override
+	public String toString() {
+		return "\n Cliente: " + cliente + "\n Ocupacion:" + ocupacion + "\n Dias: " + nDias + "\n Ocupantes: "
+				+ nOcupantes + "\n precioBase=" + precioBase + "€\n\n";
+	}
+	
 }
+	
+
+
