@@ -14,6 +14,8 @@ public class Principal {
 		Usuario usuarioFinal = optionalUser.orElse(new Usuario("01", "Carlos", "carlos@gmail.com"));
 		
 		System.out.println(usuarioFinal);
+		
+		optionalUser.map(Usuario::getNombre).filter(Usuario -> Usuario.
 	}
 
 }
