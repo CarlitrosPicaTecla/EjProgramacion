@@ -43,4 +43,17 @@ public class Gestion {
 		}
 	}
 	
+	public Optional<Usuario> buscarOpt(String id){
+		Optional<Usuario> optionalUser= Optional.empty();
+		
+		for (Usuario usuario : usuarios) {
+			optionalUser= Optional.ofNullable(usuario);
+			if(optionalUser.isPresent() && usuario.getId().equalsIgnoreCase(id)) {
+				return optionalUser;
+			}
+		}
+		
+		return Optional.empty();
+	}
+	
 }
