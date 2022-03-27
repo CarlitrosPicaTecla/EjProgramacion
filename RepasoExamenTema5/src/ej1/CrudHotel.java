@@ -2,6 +2,7 @@ package ej1;
 
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Optional;
 
 public class CrudHotel {
 
@@ -47,6 +48,21 @@ public class CrudHotel {
 			
 		}
 		return null;
+	}
+	
+	public Optional<String> buscarOp(String id){
+		Optional<String> op = Optional.empty();
+		Iterator<String> it=  habitaciones.keySet().iterator();
+	
+		
+		while(it.hasNext()) {
+			op = Optional.ofNullable(it.next());
+			if(op.isPresent() && it.next().equals(id)) {
+				return op;
+			}
+		}
+		return Optional.empty();
+		
 	}
 	
 	public void anyadirHabitacion(Habitacion h, String id) {

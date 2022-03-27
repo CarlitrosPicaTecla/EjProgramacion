@@ -3,21 +3,22 @@ package optional;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 public class Gestion {
 	
-	List<Usuario>usuarios;
+	Set<Usuario>usuarios;
 
-	public Gestion(List<Usuario> usuarios) {
+	public Gestion(Set<Usuario> usuarios) {
 		super();
 		this.usuarios = usuarios;
 	}
 
-	public List<Usuario> getUsuarios() {
+	public Set<Usuario> getUsuarios() {
 		return usuarios;
 	}
 
-	public void setUsuarios(List<Usuario> usuarios) {
+	public void setUsuarios(Set<Usuario> usuarios) {
 		this.usuarios = usuarios;
 	}
 	
@@ -29,6 +30,22 @@ public class Gestion {
 	}
 	
 	public void mostrarUsuarios() {
+		Optional<Usuario> optionalUser;
+		
+		for (Usuario usuario : usuarios) {
+			optionalUser= Optional.ofNullable(usuario);
+			if(optionalUser.isPresent()&& !usuario.getId().equalsIgnoreCase("NO ID")) {
+				System.out.println("ID: "+usuario.getId());
+				System.out.println("Nombre: "+usuario.getNombre());
+				System.out.println("E-mail: "+usuario.getEmail());
+				System.out.println();
+				
+			}
+		}
+	}
+	
+	
+	public void mostrarUsuariosNulos() {
 		Optional<Usuario> optionalUser;
 		
 		for (Usuario usuario : usuarios) {
@@ -55,5 +72,7 @@ public class Gestion {
 		
 		return Optional.empty();
 	}
+	
+
 	
 }

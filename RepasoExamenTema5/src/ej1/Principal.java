@@ -33,6 +33,9 @@ public class Principal {
 		SortedMap<String, Habitacion>ordena=new TreeMap<String, Habitacion>();
 		
 		System.out.println(habitaciones);
+		
+		
+		System.out.println(ch.buscarOp("Humilde morada"));
 	}
 
 }
