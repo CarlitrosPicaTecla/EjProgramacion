@@ -15,6 +15,7 @@ public class Principal {
 		Cancion c;
 		int numMenu;
 		String aux="";
+		Long segundos;
 		
 		Duration d=Duration.ofSeconds(0);
 		
@@ -48,20 +49,27 @@ public class Principal {
 			case 1:
 				System.out.println("Introduce nombre de cancion");
 				aux=Leer.dato();
-				cc.buscarCancionNombre(aux);
+				System.out.println(cc.buscarCancionNombre(aux));
+				
 				break;
 			case 2:
 				System.out.println("Introduce autor");
 				aux=Leer.dato();
-				cc.buscarCancionAutor(aux);
+				System.out.println(cc.buscarCancionAutor(aux));
+				
 				break;
 			case 3:
 				
 			
-				cc.buscarCancionDuracion(d);
+				System.out.println("Introduce tiempo en segundos");
+				segundos=Leer.datoLong();
+				System.out.println(cc.buscarCancionDuracion(segundos));
+
 				break;
 			case 4:
-				
+				System.out.println("Introduce genero");
+				aux=Leer.dato();
+				System.out.println(cc.nCancionesGenero(aux));
 				break;
 			case 5:
 				

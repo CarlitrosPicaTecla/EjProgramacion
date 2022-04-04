@@ -31,10 +31,10 @@ public class CrudCancion {
 		.get());
 	}
 	
-	public Optional<Cancion> buscarCancionDuracion(Duration duracion) {
+	public Optional<Cancion> buscarCancionDuracion(Long segundos) {
 		
 		return Optional.ofNullable(lista.stream()
-		.filter(cancion->cancion.getDuracion().equals(duracion))
+		.filter(cancion->cancion.getDuracion().equals(segundos))
 		.findAny()
 		.get());
 	}
