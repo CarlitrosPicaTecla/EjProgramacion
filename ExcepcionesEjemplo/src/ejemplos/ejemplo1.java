@@ -1,3 +1,4 @@
+package ejemplos;
 import java.util.Scanner;
 
 public class ejemplo1 {
@@ -7,13 +8,29 @@ public class ejemplo1 {
 		return numerador/denominador;
 	}
 	
+	public static void comprobrarEdad(int edad) throws EdadNegativaExp{
+		if(edad<0) {
+			throw new EdadNegativaExp("No puede haber edad negativa");
+		}
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		String aux;
-		int numerador=0, denominador=0, result=0;
+		int numerador=0, denominador=0, result=0, edad=0;
 
 
+		try {
+			
+		aux=sc.nextLine();
+		edad= Integer.parseInt(aux);
+		comprobrarEdad(edad);
+		}catch(EdadNegativaExp en) {
+			System.out.println(en.getMessage());
+		}
+		
+		/*
 		try {
 			  
 
@@ -33,7 +50,7 @@ public class ejemplo1 {
 		}catch(NumberFormatException e) {
 			System.out.println("La has vuelto a liar "+e);
 		}
-		
+		*/
 	}
 	
 
